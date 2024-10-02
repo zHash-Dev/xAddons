@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+
+:root {
+  --bg-color1: #1e2130;
+  --bg-color2: #2a2f42;
+  --primary-color: #e94560;
+  --text-color: #ffffff;
+  --secondary-color: #fca311;
+}
+
+* {
+  font-family: 'Baloo Bhaijaan 2';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color1);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-color2);
+  padding: 1rem 5%;
+}
+
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+#nav_logo {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+#nav_logo span {
+  color: #d0d0d0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#nav_list {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+.nav-item.active a {
+  color: var(--text-color);
+  border-bottom: 3px solid var(--color-2);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.addon-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.addon-hero h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.addon-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.addon-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.addon-nav a.active {
+  background-color: var(--primary-color);
+}
+
+.addon-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.addon-main {
+  flex: 2;
+}
+
+.addon-card {
+  text-align: center;
+  justify-content: center;
+  background-color: var(--bg-color2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.download-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+
+}
+.carousel-slide img {
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  transform: translateY(-15px);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+#prevBtn {
+  left: 1rem;
+  border-radius: 0 8px 8px 0;
+}
+#nextBtn {
+  right: 1rem;
+  border-radius: 8px 0 0 8px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dot.active {
+  width: 9px;
+  height: 9px;
+  background-color: white;
+}
+
+.addon-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.addon-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.download-btn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 48%;
+  padding: 0.8rem;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.addon-description h3 {
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+}
+
+.addon-description ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.addon-sidebar {
+  flex: 1;
+}
+
+.author-info,
+.addon-meta {
+  background-color: var(--bg-color2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.author-info h3,
+.addon-meta h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: var(--bg-color2);
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 20px 20px 0px 0px;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-weight: 700;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .addon-content {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+  }
+}
