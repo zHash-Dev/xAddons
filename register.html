@@ -1,0 +1,33 @@
+<!-- http://localhost:8158/resgister.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xAddon Registro</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-card">
+            <h2 class="register-title">Registro</h2>
+            <form class="register-form" action="register.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="Escolha um nome de usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu endereço de e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Escolha uma senha" required>
+                </div>
+                <button type="submit" class="register-button">Registrar</button>
+            </form>
+            <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
+        </div>
+    </div>
+</body>
+</html>
